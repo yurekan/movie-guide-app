@@ -1,0 +1,25 @@
+<div id="result" *ngIf="movieData">
+  <div class="info" *ngIf="movieData.Response === 'True'">
+    <img [src]="movieData.Poster" class="poster">
+    <div>
+      <h2>{{ movieData.Title }}</h2>
+      <div class="rating">
+        <img src="../../../public/star.png">
+        <h4>{{ movieData.imdbRating }}</h4>
+      </div>
+      <div class="details">
+        <span>{{ movieData.Rated }}</span>
+        <span>{{ movieData.Year }}</span>
+        <span>{{ movieData.Runtime }}</span>
+      </div>
+      <div class="genre">
+        <div *ngFor="let genre of movieData.Genre.split(',')">{{ genre }}</div>
+      </div>
+    </div>
+  </div>
+  <h3 *ngIf="movieData.Response === 'True'">Plot:</h3>
+  <p *ngIf="movieData.Response === 'True'">{{ movieData.Plot }}</p>
+  <h3 *ngIf="movieData.Response === 'True'">Cast:</h3>
+  <p *ngIf="movieData.Response === 'True'">{{ movieData.Actors }}</p>
+  <h3 *ngIf="movieData.Response === 'False'" class="msg">{{ movieData.Error }}</h3>
+</div>

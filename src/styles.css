@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  body {
+    height: 100vh;
+    background: linear-gradient(#000000 50%, #ffb92a 50%);
+  }
+
+  @media screen and (max-width: 600px) {
+    .info {
+      grid-template-columns: 1fr;
+    }
+    .poster {
+      margin: auto;
+      width: auto;
+      max-height: 10.8em;
+    }
+  }
+  /* Add the rest of the CSS styles from the original stylesheet here */

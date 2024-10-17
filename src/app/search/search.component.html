@@ -1,0 +1,9 @@
+<div class="search-container">
+    <input
+      type="text"
+      placeholder="Enter movie name here..."
+      [(ngModel)]="movieName"
+      (keyup.enter)="searchMovie()"
+    />
+    <button (click)="searchMovie()">Search</button>
+</div>
